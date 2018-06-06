@@ -1,0 +1,78 @@
+﻿@model IEnumerable<BlogUi.Models.OrgMsgStatus>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.orgMsgId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.orgMsgNmId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.orgNbOfTx)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.stsRsnInfPrtry)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.stsRsnAddtlInf)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.dtldNbOfTxs)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.dtldSts)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.dtldCtrlSum)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.orgMsgId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.orgMsgNmId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.orgNbOfTx)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.stsRsnInfPrtry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.stsRsnAddtlInf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dtldNbOfTxs)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dtldSts)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dtldCtrlSum)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.orgMsgStatusId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.orgMsgStatusId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.orgMsgStatusId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

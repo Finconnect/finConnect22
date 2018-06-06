@@ -1,0 +1,114 @@
+﻿@model IEnumerable<BlogUi.Models.Party>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.prtyNm)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.prtyadrTp)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.prtyDep)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.prtySubDep)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.prtyStrNm)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.prtyBldgNb)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.prtyPstCd)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.prtyTwnNm)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.prtyCtrySubDvsn)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.prtyCtryCd)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.prtyAddLine)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.prtyType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.prtyAcctOthrId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.prtyAcctIBAN)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.prtyNm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prtyadrTp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prtyDep)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prtySubDep)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prtyStrNm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prtyBldgNb)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prtyPstCd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prtyTwnNm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prtyCtrySubDvsn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prtyCtryCd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prtyAddLine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prtyType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prtyAcctOthrId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prtyAcctIBAN)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.prtyId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.prtyId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.prtyId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

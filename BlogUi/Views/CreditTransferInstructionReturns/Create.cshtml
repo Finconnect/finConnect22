@@ -1,0 +1,94 @@
+﻿@model BlogUi.Models.CreditTransferInstructionReturn
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+<h4>CreditTransferInstructionReturn</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="rtrId" class="control-label"></label>
+                <input asp-for="rtrId" class="form-control" />
+                <span asp-validation-for="rtrId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="orgMsgId" class="control-label"></label>
+                <input asp-for="orgMsgId" class="form-control" />
+                <span asp-validation-for="orgMsgId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="orgMsgNmId" class="control-label"></label>
+                <input asp-for="orgMsgNmId" class="form-control" />
+                <span asp-validation-for="orgMsgNmId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="orgDtTm" class="control-label"></label>
+                <input asp-for="orgDtTm" class="form-control" />
+                <span asp-validation-for="orgDtTm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="orgEndToEndId" class="control-label"></label>
+                <input asp-for="orgEndToEndId" class="form-control" />
+                <span asp-validation-for="orgEndToEndId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="orgTxId" class="control-label"></label>
+                <input asp-for="orgTxId" class="form-control" />
+                <span asp-validation-for="orgTxId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="orgClrSysRef" class="control-label"></label>
+                <input asp-for="orgClrSysRef" class="form-control" />
+                <span asp-validation-for="orgClrSysRef" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="rtrdIntrBKSttlAmt" class="control-label"></label>
+                <input asp-for="rtrdIntrBKSttlAmt" class="form-control" />
+                <span asp-validation-for="rtrdIntrBKSttlAmt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="rtrRsnInfPrtry" class="control-label"></label>
+                <input asp-for="rtrRsnInfPrtry" class="form-control" />
+                <span asp-validation-for="rtrRsnInfPrtry" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="orgTxRefIntrBKSttlmAmt" class="control-label"></label>
+                <input asp-for="orgTxRefIntrBKSttlmAmt" class="form-control" />
+                <span asp-validation-for="orgTxRefIntrBKSttlmAmt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="orgTxRefIntrBKSttlmDt" class="control-label"></label>
+                <input asp-for="orgTxRefIntrBKSttlmDt" class="form-control" />
+                <span asp-validation-for="orgTxRefIntrBKSttlmDt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ogrSvcLvlPrtry" class="control-label"></label>
+                <input asp-for="ogrSvcLvlPrtry" class="form-control" />
+                <span asp-validation-for="ogrSvcLvlPrtry" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="msgDir" class="control-label"></label>
+                <input asp-for="msgDir" class="form-control" />
+                <span asp-validation-for="msgDir" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

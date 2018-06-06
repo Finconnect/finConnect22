@@ -1,0 +1,85 @@
+﻿@model BlogUi.Models.GroupHeader
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>GroupHeader</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.msgId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.msgId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.nbOfTxs)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.nbOfTxs)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.creDtTm)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.creDtTm)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ttlIntrBKSttlmAmt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ttlIntrBKSttlmAmt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.intrBkSttlmDt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.intrBkSttlmDt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.sttlImInfSttlmMtd)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.sttlImInfSttlmMtd)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.sttlInfPrtry)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.sttlInfPrtry)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GRPRTR)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GRPRTR)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GRPTYPE)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GRPTYPE)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GRPHRTRID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GRPHRTRID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GRPHSTSID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GRPHSTSID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.grpHId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

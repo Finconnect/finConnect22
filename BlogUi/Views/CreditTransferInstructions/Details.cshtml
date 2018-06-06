@@ -1,0 +1,55 @@
+﻿@model BlogUi.Models.CreditTransferInstruction
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CreditTransferInstruction</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.pmtIdEndToEndId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.pmtIdEndToEndId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.pmtIdTxId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.pmtIdTxId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.intrBkSttlmAm)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.intrBkSttlmAm)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.chrgBr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.chrgBr)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.instInf)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.instInf)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.msgDir)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.msgDir)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.cdTxId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,100 @@
+﻿@model BlogUi.Models.Party
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+<h4>Party</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="prtyId" />
+            <div class="form-group">
+                <label asp-for="prtyNm" class="control-label"></label>
+                <input asp-for="prtyNm" class="form-control" />
+                <span asp-validation-for="prtyNm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="prtyadrTp" class="control-label"></label>
+                <input asp-for="prtyadrTp" class="form-control" />
+                <span asp-validation-for="prtyadrTp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="prtyDep" class="control-label"></label>
+                <input asp-for="prtyDep" class="form-control" />
+                <span asp-validation-for="prtyDep" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="prtySubDep" class="control-label"></label>
+                <input asp-for="prtySubDep" class="form-control" />
+                <span asp-validation-for="prtySubDep" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="prtyStrNm" class="control-label"></label>
+                <input asp-for="prtyStrNm" class="form-control" />
+                <span asp-validation-for="prtyStrNm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="prtyBldgNb" class="control-label"></label>
+                <input asp-for="prtyBldgNb" class="form-control" />
+                <span asp-validation-for="prtyBldgNb" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="prtyPstCd" class="control-label"></label>
+                <input asp-for="prtyPstCd" class="form-control" />
+                <span asp-validation-for="prtyPstCd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="prtyTwnNm" class="control-label"></label>
+                <input asp-for="prtyTwnNm" class="form-control" />
+                <span asp-validation-for="prtyTwnNm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="prtyCtrySubDvsn" class="control-label"></label>
+                <input asp-for="prtyCtrySubDvsn" class="form-control" />
+                <span asp-validation-for="prtyCtrySubDvsn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="prtyCtryCd" class="control-label"></label>
+                <input asp-for="prtyCtryCd" class="form-control" />
+                <span asp-validation-for="prtyCtryCd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="prtyAddLine" class="control-label"></label>
+                <input asp-for="prtyAddLine" class="form-control" />
+                <span asp-validation-for="prtyAddLine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="prtyType" class="control-label"></label>
+                <input asp-for="prtyType" class="form-control" />
+                <span asp-validation-for="prtyType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="prtyAcctOthrId" class="control-label"></label>
+                <input asp-for="prtyAcctOthrId" class="form-control" />
+                <span asp-validation-for="prtyAcctOthrId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="prtyAcctIBAN" class="control-label"></label>
+                <input asp-for="prtyAcctIBAN" class="form-control" />
+                <span asp-validation-for="prtyAcctIBAN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

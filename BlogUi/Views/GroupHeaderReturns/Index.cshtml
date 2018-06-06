@@ -1,0 +1,78 @@
+﻿@model IEnumerable<BlogUi.Models.GroupHeaderReturn>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.msgId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.creDtTm)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.nbOfTxs)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.grpRtr)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ttlRtrdIntrBKSttlmAmt)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.intrBkSttlmDt)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.sttlImInfSttlmMtd)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.sttlInfPrtry)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.msgId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.creDtTm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nbOfTxs)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.grpRtr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ttlRtrdIntrBKSttlmAmt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.intrBkSttlmDt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sttlImInfSttlmMtd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sttlInfPrtry)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.grpHrtId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.grpHrtId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.grpHrtId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

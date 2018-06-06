@@ -1,0 +1,74 @@
+﻿@model BlogUi.Models.CreditTransferStatus
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+<h4>CreditTransferStatus</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="stsId" class="control-label"></label>
+                <input asp-for="stsId" class="form-control" />
+                <span asp-validation-for="stsId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="orgEndToEndId" class="control-label"></label>
+                <input asp-for="orgEndToEndId" class="form-control" />
+                <span asp-validation-for="orgEndToEndId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="orgTxId" class="control-label"></label>
+                <input asp-for="orgTxId" class="form-control" />
+                <span asp-validation-for="orgTxId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="stsRsnPrtry" class="control-label"></label>
+                <input asp-for="stsRsnPrtry" class="form-control" />
+                <span asp-validation-for="stsRsnPrtry" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="clrSysRef" class="control-label"></label>
+                <input asp-for="clrSysRef" class="form-control" />
+                <span asp-validation-for="clrSysRef" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="orgTxRefIntrBKSttlmAmt" class="control-label"></label>
+                <input asp-for="orgTxRefIntrBKSttlmAmt" class="form-control" />
+                <span asp-validation-for="orgTxRefIntrBKSttlmAmt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="orgTxRefIntrBkSttlDt" class="control-label"></label>
+                <input asp-for="orgTxRefIntrBkSttlDt" class="form-control" />
+                <span asp-validation-for="orgTxRefIntrBkSttlDt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="orgTxRefDbtrAgtBIC" class="control-label"></label>
+                <input asp-for="orgTxRefDbtrAgtBIC" class="form-control" />
+                <span asp-validation-for="orgTxRefDbtrAgtBIC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="orgTxRefCdtrAgtBIC" class="control-label"></label>
+                <input asp-for="orgTxRefCdtrAgtBIC" class="form-control" />
+                <span asp-validation-for="orgTxRefCdtrAgtBIC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

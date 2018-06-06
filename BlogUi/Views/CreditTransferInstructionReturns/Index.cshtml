@@ -1,0 +1,108 @@
+﻿@model IEnumerable<BlogUi.Models.CreditTransferInstructionReturn>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.rtrId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.orgMsgId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.orgMsgNmId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.orgDtTm)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.orgEndToEndId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.orgTxId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.orgClrSysRef)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.rtrdIntrBKSttlAmt)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.rtrRsnInfPrtry)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.orgTxRefIntrBKSttlmAmt)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.orgTxRefIntrBKSttlmDt)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ogrSvcLvlPrtry)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.msgDir)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.rtrId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.orgMsgId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.orgMsgNmId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.orgDtTm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.orgEndToEndId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.orgTxId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.orgClrSysRef)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rtrdIntrBKSttlAmt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rtrRsnInfPrtry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.orgTxRefIntrBKSttlmAmt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.orgTxRefIntrBKSttlmDt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ogrSvcLvlPrtry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.msgDir)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.cdrtxId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.cdrtxId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.cdrtxId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

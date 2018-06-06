@@ -1,0 +1,69 @@
+﻿@model BlogUi.Models.OrgMsgStatus
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+<h4>OrgMsgStatus</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="orgMsgId" class="control-label"></label>
+                <input asp-for="orgMsgId" class="form-control" />
+                <span asp-validation-for="orgMsgId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="orgMsgNmId" class="control-label"></label>
+                <input asp-for="orgMsgNmId" class="form-control" />
+                <span asp-validation-for="orgMsgNmId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="orgNbOfTx" class="control-label"></label>
+                <input asp-for="orgNbOfTx" class="form-control" />
+                <span asp-validation-for="orgNbOfTx" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="stsRsnInfPrtry" class="control-label"></label>
+                <input asp-for="stsRsnInfPrtry" class="form-control" />
+                <span asp-validation-for="stsRsnInfPrtry" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="stsRsnAddtlInf" class="control-label"></label>
+                <input asp-for="stsRsnAddtlInf" class="form-control" />
+                <span asp-validation-for="stsRsnAddtlInf" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dtldNbOfTxs" class="control-label"></label>
+                <input asp-for="dtldNbOfTxs" class="form-control" />
+                <span asp-validation-for="dtldNbOfTxs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dtldSts" class="control-label"></label>
+                <input asp-for="dtldSts" class="form-control" />
+                <span asp-validation-for="dtldSts" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dtldCtrlSum" class="control-label"></label>
+                <input asp-for="dtldCtrlSum" class="form-control" />
+                <span asp-validation-for="dtldCtrlSum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

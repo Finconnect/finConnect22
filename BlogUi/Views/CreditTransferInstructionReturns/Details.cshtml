@@ -1,0 +1,97 @@
+﻿@model BlogUi.Models.CreditTransferInstructionReturn
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CreditTransferInstructionReturn</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.rtrId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.rtrId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.orgMsgId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.orgMsgId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.orgMsgNmId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.orgMsgNmId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.orgDtTm)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.orgDtTm)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.orgEndToEndId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.orgEndToEndId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.orgTxId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.orgTxId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.orgClrSysRef)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.orgClrSysRef)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.rtrdIntrBKSttlAmt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.rtrdIntrBKSttlAmt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.rtrRsnInfPrtry)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.rtrRsnInfPrtry)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.orgTxRefIntrBKSttlmAmt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.orgTxRefIntrBKSttlmAmt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.orgTxRefIntrBKSttlmDt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.orgTxRefIntrBKSttlmDt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ogrSvcLvlPrtry)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ogrSvcLvlPrtry)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.msgDir)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.msgDir)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.cdrtxId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

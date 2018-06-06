@@ -1,0 +1,37 @@
+﻿@model BlogUi.Models.Currency
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Currency</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ccyCd)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ccyCd)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ccyNm)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ccyNm)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ccyExch)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ccyExch)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ccyId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

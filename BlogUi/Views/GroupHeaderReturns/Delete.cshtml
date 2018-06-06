@@ -1,0 +1,70 @@
+﻿@model BlogUi.Models.GroupHeaderReturn
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>GroupHeaderReturn</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.msgId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.msgId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.creDtTm)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.creDtTm)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.nbOfTxs)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.nbOfTxs)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.grpRtr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.grpRtr)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ttlRtrdIntrBKSttlmAmt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ttlRtrdIntrBKSttlmAmt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.intrBkSttlmDt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.intrBkSttlmDt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.sttlImInfSttlmMtd)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.sttlImInfSttlmMtd)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.sttlInfPrtry)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.sttlInfPrtry)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="grpHrtId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

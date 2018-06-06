@@ -1,0 +1,73 @@
+﻿@model BlogUi.Models.CreditTransferStatus
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CreditTransferStatus</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.stsId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.stsId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.orgEndToEndId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.orgEndToEndId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.orgTxId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.orgTxId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.stsRsnPrtry)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.stsRsnPrtry)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.clrSysRef)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.clrSysRef)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.orgTxRefIntrBKSttlmAmt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.orgTxRefIntrBKSttlmAmt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.orgTxRefIntrBkSttlDt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.orgTxRefIntrBkSttlDt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.orgTxRefDbtrAgtBIC)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.orgTxRefDbtrAgtBIC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.orgTxRefCdtrAgtBIC)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.orgTxRefCdtrAgtBIC)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.txStsId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

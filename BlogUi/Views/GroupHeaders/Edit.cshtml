@@ -1,0 +1,87 @@
+﻿@model BlogUi.Models.GroupHeader
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+<h4>GroupHeader</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="grpHId" />
+            <div class="form-group">
+                <label asp-for="msgId" class="control-label"></label>
+                <input asp-for="msgId" class="form-control" />
+                <span asp-validation-for="msgId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nbOfTxs" class="control-label"></label>
+                <input asp-for="nbOfTxs" class="form-control" />
+                <span asp-validation-for="nbOfTxs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="creDtTm" class="control-label"></label>
+                <input asp-for="creDtTm" class="form-control" />
+                <span asp-validation-for="creDtTm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ttlIntrBKSttlmAmt" class="control-label"></label>
+                <input asp-for="ttlIntrBKSttlmAmt" class="form-control" />
+                <span asp-validation-for="ttlIntrBKSttlmAmt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="intrBkSttlmDt" class="control-label"></label>
+                <input asp-for="intrBkSttlmDt" class="form-control" />
+                <span asp-validation-for="intrBkSttlmDt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="sttlImInfSttlmMtd" class="control-label"></label>
+                <input asp-for="sttlImInfSttlmMtd" class="form-control" />
+                <span asp-validation-for="sttlImInfSttlmMtd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="sttlInfPrtry" class="control-label"></label>
+                <input asp-for="sttlInfPrtry" class="form-control" />
+                <span asp-validation-for="sttlInfPrtry" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="GRPRTR" /> @Html.DisplayNameFor(model => model.GRPRTR)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="GRPTYPE" class="control-label"></label>
+                <input asp-for="GRPTYPE" class="form-control" />
+                <span asp-validation-for="GRPTYPE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GRPHRTRID" class="control-label"></label>
+                <input asp-for="GRPHRTRID" class="form-control" />
+                <span asp-validation-for="GRPHRTRID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GRPHSTSID" class="control-label"></label>
+                <input asp-for="GRPHSTSID" class="form-control" />
+                <span asp-validation-for="GRPHSTSID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

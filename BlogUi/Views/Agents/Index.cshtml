@@ -1,0 +1,174 @@
+﻿@model IEnumerable<BlogUi.Models.Agent>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.agtTypeFlag)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.agtClrSystemID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.agtClrsSystemPrtry)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.agtBIC)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.agtBrnchId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.agtName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.agtStreet)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.agtBldgNb)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.agtPostCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.agtTownName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.agtCtryDiv)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.agtCtryName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.agtPrtryID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.agtPrtryIssuer)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.agtBranchFlag)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.agtBranchname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.agtAccount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.agtIBAN)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.agtAdrTp)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.agtDept)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.agtSubDept)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.agtCtrySubDvsn)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.agtAdrLine)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.agtOthr)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.agtTypeFlag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.agtClrSystemID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.agtClrsSystemPrtry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.agtBIC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.agtBrnchId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.agtName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.agtStreet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.agtBldgNb)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.agtPostCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.agtTownName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.agtCtryDiv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.agtCtryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.agtPrtryID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.agtPrtryIssuer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.agtBranchFlag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.agtBranchname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.agtAccount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.agtIBAN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.agtAdrTp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.agtDept)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.agtSubDept)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.agtCtrySubDvsn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.agtAdrLine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.agtOthr)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.agtCd">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.agtCd">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.agtCd">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

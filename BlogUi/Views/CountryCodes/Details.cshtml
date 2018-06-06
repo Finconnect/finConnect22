@@ -1,0 +1,31 @@
+﻿@model BlogUi.Models.CountryCode
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CountryCode</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ctryCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ctryCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ctryNm)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ctryNm)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ctryId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

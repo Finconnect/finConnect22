@@ -1,0 +1,103 @@
+﻿@model BlogUi.Models.Party
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Party</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.prtyNm)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.prtyNm)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.prtyadrTp)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.prtyadrTp)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.prtyDep)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.prtyDep)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.prtySubDep)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.prtySubDep)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.prtyStrNm)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.prtyStrNm)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.prtyBldgNb)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.prtyBldgNb)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.prtyPstCd)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.prtyPstCd)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.prtyTwnNm)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.prtyTwnNm)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.prtyCtrySubDvsn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.prtyCtrySubDvsn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.prtyCtryCd)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.prtyCtryCd)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.prtyAddLine)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.prtyAddLine)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.prtyType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.prtyType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.prtyAcctOthrId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.prtyAcctOthrId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.prtyAcctIBAN)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.prtyAcctIBAN)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.prtyId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

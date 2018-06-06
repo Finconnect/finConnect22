@@ -1,0 +1,40 @@
+﻿@model BlogUi.Models.StatusCode
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>StatusCode</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.stsCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.stsCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.stsName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.stsName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.stsDesc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.stsDesc)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="stsCodeId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

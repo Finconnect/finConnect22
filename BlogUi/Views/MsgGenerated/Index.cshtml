@@ -1,0 +1,107 @@
+﻿@model BlogUi.Models.GroupHeader
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_master..cshtml";
+}
+<h2>Index</h2>
+<FIToFICstmrCdtTrf>
+    <GrpHdr>
+        <MsgId>@Html.DisplayNameFor(model => model.msgId)</MsgId>
+        <CreDtTm>@Html.DisplayNameFor(model => model.creDtTm)</CreDtTm>
+        <NbOfTxs>1</NbOfTxs>
+        <ttlIntrBKSttlmAmt></ttlIntrBKSttlmAmt>
+        
+        <SttlmInf>
+            <SttlmMtd>@Html.DisplayNameFor(model => model.sttlImInfSttlmMtd)</SttlmMtd>
+        </SttlmInf>
+        <InstgAgt>
+            <FinInstnId>
+                <BICFI>@*@Html.DisplayNameFor(model => model.agtb)*@</BICFI>
+            </FinInstnId>
+        </InstgAgt>
+        
+    </GrpHdr>
+    @foreach(var i in Model.creditTransferInstruction)
+    {
+
+
+    }
+    <CdtTrfTxInf>
+        <PmtId>
+            <InstrId></InstrId>
+            <EndToEndId></EndToEndId>
+            <TxId></TxId>
+        </PmtId>
+        <IntrBkSttlmAmt Ccy=""></IntrBkSttlmAmt>
+        <IntrBkSttlmDt></IntrBkSttlmDt>
+        <InstdAmt Ccy=""></InstdAmt>
+        <ChrgBr></ChrgBr>
+        <UltmtDbtr>
+            <Nm></Nm>
+            <PstlAdr>
+                <StrtNm></StrtNm>
+                <BldgNb></BldgNb>
+                <PstCd></PstCd>
+                <TwnNm></TwnNm>
+                <Ctry></Ctry>
+            </PstlAdr>
+        </UltmtDbtr>
+        <Dbtr>
+            <Nm></Nm>
+            <PstlAdr>
+                <StrtNm></StrtNm>
+                <BldgNb></BldgNb>
+                <PstCd></PstCd>
+                <TwnNm></TwnNm>
+                <Ctry></Ctry>
+            </PstlAdr>
+        </Dbtr>
+        <DbtrAcct>
+            <Id>
+                <Othr>
+                    <Id></Id>
+                </Othr>
+            </Id>
+        </DbtrAcct>
+        <DbtrAgt>
+            <FinInstnId>
+                <BICFI></BICFI>
+            </FinInstnId>
+        </DbtrAgt>
+        <CdtrAgt>
+            <FinInstnId>
+                <BICFI></BICFI>
+            </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+            <Nm></Nm>
+            <PstlAdr>
+                <StrtNm></StrtNm>
+                <BldgNb></BldgNb>
+                <TwnNm></TwnNm>
+                <Ctry></Ctry>
+            </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+            <Id>
+                <IBAN></IBAN>
+            </Id>
+        </CdtrAcct>
+        <Purp>
+            <Cd></Cd>
+        </Purp>
+        <RmtInf>
+            <Strd>
+                <RfrdDocInf>
+                    <Tp>
+                        <CdOrPrtry>
+                            <Cd></Cd>
+                        </CdOrPrtry>
+                    </Tp>
+                    <Nb></Nb>
+                    <RltdDt></RltdDt>
+                </RfrdDocInf>
+            </Strd>
+        </RmtInf>
+    </CdtTrfTxInf>
+</FIToFICstmrCdtTrf>

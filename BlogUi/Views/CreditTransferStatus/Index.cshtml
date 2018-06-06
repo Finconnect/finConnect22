@@ -1,0 +1,84 @@
+﻿@model IEnumerable<BlogUi.Models.CreditTransferStatus>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.stsId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.orgEndToEndId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.orgTxId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.stsRsnPrtry)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.clrSysRef)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.orgTxRefIntrBKSttlmAmt)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.orgTxRefIntrBkSttlDt)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.orgTxRefDbtrAgtBIC)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.orgTxRefCdtrAgtBIC)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.stsId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.orgEndToEndId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.orgTxId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.stsRsnPrtry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.clrSysRef)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.orgTxRefIntrBKSttlmAmt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.orgTxRefIntrBkSttlDt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.orgTxRefDbtrAgtBIC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.orgTxRefCdtrAgtBIC)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.txStsId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.txStsId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.txStsId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,96 @@
+﻿@model IEnumerable<BlogUi.Models.GroupHeader>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.msgId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.nbOfTxs)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.creDtTm)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ttlIntrBKSttlmAmt)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.intrBkSttlmDt)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.sttlImInfSttlmMtd)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.sttlInfPrtry)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GRPRTR)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GRPTYPE)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GRPHRTRID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GRPHSTSID)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.msgId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nbOfTxs)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.creDtTm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ttlIntrBKSttlmAmt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.intrBkSttlmDt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sttlImInfSttlmMtd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sttlInfPrtry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GRPRTR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GRPTYPE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GRPHRTRID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GRPHSTSID)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.grpHId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.grpHId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.grpHId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

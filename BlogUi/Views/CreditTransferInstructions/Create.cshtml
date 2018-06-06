@@ -1,0 +1,65 @@
+﻿@model BlogUi.Models.CreditTransferInstruction
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_master.cshtml";
+}
+
+<h2>Create</h2>
+
+<h4>CreditTransferInstruction</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="form-group">
+                <label asp-for="pmtIdEndToEndId" class="control-label"></label>
+                <input asp-for="pmtIdEndToEndId" class="form-control" />
+                <span asp-validation-for="pmtIdEndToEndId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="pmtIdTxId" class="control-label"></label>
+                <input asp-for="pmtIdTxId" class="form-control" />
+                <span asp-validation-for="pmtIdTxId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="intrBkSttlmAm" class="control-label"></label>
+                <input asp-for="intrBkSttlmAm" class="form-control" />
+                <span asp-validation-for="intrBkSttlmAm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GRPHID" class="control-label"></label>
+                @Html.DropDownListFor(model => model.ccyId, (SelectList)ViewBag.CURREN, "--Select--", new { @class = "form-control" })
+                <span asp-validation-for="ccyId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="chrgBr" class="control-label"></label>
+                <input asp-for="chrgBr" class="form-control" />
+                <span asp-validation-for="chrgBr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="instInf" class="control-label"></label>
+                <input asp-for="instInf" class="form-control" />
+                <span asp-validation-for="instInf" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="msgDir" class="control-label"></label>
+                <input asp-for="msgDir" class="form-control" />
+                <span asp-validation-for="msgDir" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

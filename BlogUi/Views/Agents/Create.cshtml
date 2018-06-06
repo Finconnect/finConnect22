@@ -1,0 +1,149 @@
+﻿@model BlogUi.Models.Agent
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+<h4>Agent</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="agtTypeFlag" class="control-label"></label>
+                <input asp-for="agtTypeFlag" class="form-control" />
+                <span asp-validation-for="agtTypeFlag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="agtClrSystemID" class="control-label"></label>
+                <input asp-for="agtClrSystemID" class="form-control" />
+                <span asp-validation-for="agtClrSystemID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="agtClrsSystemPrtry" class="control-label"></label>
+                <input asp-for="agtClrsSystemPrtry" class="form-control" />
+                <span asp-validation-for="agtClrsSystemPrtry" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="agtBIC" class="control-label"></label>
+                <input asp-for="agtBIC" class="form-control" />
+                <span asp-validation-for="agtBIC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="agtBrnchId" class="control-label"></label>
+                <input asp-for="agtBrnchId" class="form-control" />
+                <span asp-validation-for="agtBrnchId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="agtName" class="control-label"></label>
+                <input asp-for="agtName" class="form-control" />
+                <span asp-validation-for="agtName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="agtStreet" class="control-label"></label>
+                <input asp-for="agtStreet" class="form-control" />
+                <span asp-validation-for="agtStreet" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="agtBldgNb" class="control-label"></label>
+                <input asp-for="agtBldgNb" class="form-control" />
+                <span asp-validation-for="agtBldgNb" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="agtPostCode" class="control-label"></label>
+                <input asp-for="agtPostCode" class="form-control" />
+                <span asp-validation-for="agtPostCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="agtTownName" class="control-label"></label>
+                <input asp-for="agtTownName" class="form-control" />
+                <span asp-validation-for="agtTownName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="agtCtryDiv" class="control-label"></label>
+                <input asp-for="agtCtryDiv" class="form-control" />
+                <span asp-validation-for="agtCtryDiv" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="agtCtryName" class="control-label"></label>
+                <input asp-for="agtCtryName" class="form-control" />
+                <span asp-validation-for="agtCtryName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="agtPrtryID" class="control-label"></label>
+                <input asp-for="agtPrtryID" class="form-control" />
+                <span asp-validation-for="agtPrtryID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="agtPrtryIssuer" class="control-label"></label>
+                <input asp-for="agtPrtryIssuer" class="form-control" />
+                <span asp-validation-for="agtPrtryIssuer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="agtBranchFlag" class="control-label"></label>
+                <input asp-for="agtBranchFlag" class="form-control" />
+                <span asp-validation-for="agtBranchFlag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="agtBranchname" class="control-label"></label>
+                <input asp-for="agtBranchname" class="form-control" />
+                <span asp-validation-for="agtBranchname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="agtAccount" class="control-label"></label>
+                <input asp-for="agtAccount" class="form-control" />
+                <span asp-validation-for="agtAccount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="agtIBAN" class="control-label"></label>
+                <input asp-for="agtIBAN" class="form-control" />
+                <span asp-validation-for="agtIBAN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="agtAdrTp" class="control-label"></label>
+                <input asp-for="agtAdrTp" class="form-control" />
+                <span asp-validation-for="agtAdrTp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="agtDept" class="control-label"></label>
+                <input asp-for="agtDept" class="form-control" />
+                <span asp-validation-for="agtDept" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="agtSubDept" class="control-label"></label>
+                <input asp-for="agtSubDept" class="form-control" />
+                <span asp-validation-for="agtSubDept" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="agtCtrySubDvsn" class="control-label"></label>
+                <input asp-for="agtCtrySubDvsn" class="form-control" />
+                <span asp-validation-for="agtCtrySubDvsn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="agtAdrLine" class="control-label"></label>
+                <input asp-for="agtAdrLine" class="form-control" />
+                <span asp-validation-for="agtAdrLine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="agtOthr" class="control-label"></label>
+                <input asp-for="agtOthr" class="form-control" />
+                <span asp-validation-for="agtOthr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

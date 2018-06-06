@@ -1,0 +1,67 @@
+﻿@model BlogUi.Models.OrgMsgStatus
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>OrgMsgStatus</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.orgMsgId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.orgMsgId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.orgMsgNmId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.orgMsgNmId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.orgNbOfTx)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.orgNbOfTx)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.stsRsnInfPrtry)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.stsRsnInfPrtry)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.stsRsnAddtlInf)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.stsRsnAddtlInf)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.dtldNbOfTxs)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.dtldNbOfTxs)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.dtldSts)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.dtldSts)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.dtldCtrlSum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.dtldCtrlSum)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.orgMsgStatusId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

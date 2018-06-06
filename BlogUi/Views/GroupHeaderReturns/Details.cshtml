@@ -1,0 +1,67 @@
+﻿@model BlogUi.Models.GroupHeaderReturn
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>GroupHeaderReturn</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.msgId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.msgId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.creDtTm)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.creDtTm)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.nbOfTxs)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.nbOfTxs)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.grpRtr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.grpRtr)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ttlRtrdIntrBKSttlmAmt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ttlRtrdIntrBKSttlmAmt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.intrBkSttlmDt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.intrBkSttlmDt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.sttlImInfSttlmMtd)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.sttlImInfSttlmMtd)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.sttlInfPrtry)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.sttlInfPrtry)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.grpHrtId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
