@@ -69,6 +69,7 @@ namespace BlogUi.Migrations
                 principalTable: "transacrtionAgents",
                 principalColumn: "id",
                 onDelete: ReferentialAction.Restrict);
+
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

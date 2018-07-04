@@ -64,22 +64,22 @@ namespace BlogUi.Controllers
 
             grp.nbOfTxs = Inst.Count();
 
-            var query = from x in _context.groupHeaders.Where(c => c.grpHId == 1)
-                        select new GroupHeader
-                        {
-                            grpHId = x.grpHId,
+            //var query = from x in _context.groupHeaders.Where(c => c.grpHId == 1)
+            //            select new GroupHeader
+            //            {
+            //                grpHId = x.grpHId,
 
-                            creditTransferInstruction = (from t in x.creditTransferInstruction.Where(c => c.GRPHID.grpHId == x.grpHId)
-                                                         select new CreditTransferInstruction
-                                                         {
-                                                             cdTxId = t.cdTxId,
-                                                             agents = (
-                                                                        from a in t.agents.Where(c => !c.As.Any 
-                                                                       ).ToList()
-                                                         }).ToList()
+            //                creditTransferInstruction = (from t in x.creditTransferInstruction.Where(c => c.GRPHID.grpHId == x.grpHId)
+            //                                             select new CreditTransferInstruction
+            //                                             {
+            //                                                 cdTxId = t.cdTxId,
+            //                                                 agents = (
+            //                                                            from a in t.agents.Where(c => !c.As.Any 
+            //                                                           ).ToList()
+            //                                             }).ToList()
 
 
-                        };
+            //            };
 
             //var msg = from g in _context.groupHeaders
             //          where g.grpHId == 1
